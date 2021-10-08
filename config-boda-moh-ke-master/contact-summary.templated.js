@@ -1,9 +1,9 @@
 const fields = [
   { appliesToType: 'person', label: 'contact.age', value: contact.date_of_birth, width: 4, filter: 'age' },
-  { appliesToType: 'person', label: 'contact.sex', value: 'contact.sex.' + contact.sex, translate: true, width: 4 },
-  { appliesToType: 'person', label: 'contact.phone', value: contact.phone, width: 4, filter: 'phone' },
+  { appliesToType: 'person', label: 'contact.sex', value: 'contact.sex.' + contact.gender, translate: true, width: 4 },
+  { appliesToType: 'person', label: 'contact.phone', value: contact.phone_number, width: 4, filter: 'phone' },
   { appliesToType: 'person', label: 'contact.parent', value: lineage, filter: 'lineage' },
-  { appliesToType: 'person', label: 'ID Number', value: contact.national_id || contact.passport_number || contact.alien_number || 'N/A', width: 4 },
+  { appliesToType: 'person', label: 'ID Number', value: contact.id_number || contact.passport_number || contact.alien_number || 'N/A', width: 4 },
 
   { appliesToType: '!person', appliesIf: () => { return contact.contact_type === 'trace_case'; }, label: 'Case ID', value: contact && contact.case_id, width: 4 },
   { appliesToType: '!person', appliesIf: () => { return /case|trace/.test(contact.contact_type); }, label: 'contact.age', value: contact.date_of_birth, width: 4, filter: 'age' },
