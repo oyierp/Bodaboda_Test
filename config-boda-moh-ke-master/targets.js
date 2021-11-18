@@ -4,11 +4,10 @@ module.exports = [
     type: 'count',
     icon: 'icon-healthcare-assessment',
     goal: 5000,
-    translation_key: 'targets.assessments.title',
+    translation_key: 'targets.consent.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
 
-    appliesTo: 'consenting',
-    appliesToType: ['contacts'],
+    appliesTo: 'contacts',
     date: 'now'
   },
   {
@@ -16,11 +15,10 @@ module.exports = [
     type: 'count',
     icon: 'icon-healthcare-assessment',
     goal: -1,
-    translation_key: 'targets.assessments.title',
+    translation_key: 'targets.covid_test.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
 
     appliesTo: 'reports',
-    appliesToType: ['assessment'],
     date: 'reported'
   },
 
@@ -29,11 +27,10 @@ module.exports = [
     type: 'count',
     icon: 'icon-healthcare-assessment',
     goal: -1,
-    translation_key: 'targets.assessments.title',
+    translation_key: 'targets.tb_test.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
 
     appliesTo: 'reports',
-    appliesToType: ['assessment'],
     date: 'reported'
   },
 {
@@ -41,11 +38,10 @@ module.exports = [
     type: 'count',
     icon: 'icon-healthcare-assessment',
     goal: -1,
-    translation_key: 'targets.assessments.title',
+    translation_key: 'targets.ag_test.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
 
     appliesTo: 'reports',
-    appliesToType: ['assessment'],
     date: 'reported'
   },
 
