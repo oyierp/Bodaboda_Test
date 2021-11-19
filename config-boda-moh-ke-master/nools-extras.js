@@ -1,4 +1,10 @@
-module.exports = {
-  covidPercTested(c,r) {
-    return r.form === 'sampling' && r.fields.screening_cov === 'true');
+const extras = require('./nools-extras');
+
+covidPercTested(contact,report) {
+  return report.form === 'sampling' && report.fields.screening_cov === 'true');
   },
+
+module.exports = {
+  covidPercTested,
+
+};
