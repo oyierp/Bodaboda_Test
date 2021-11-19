@@ -11,7 +11,7 @@ module.exports = [
     type: 'percent',
     icon: 'icon-healthcare-assessment',
     goal: -1,
-    translation_key: 'targets.covid_test.title',
+    translation_key: 'targets.covid.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
 
     appliesTo: 'contacts',
@@ -22,7 +22,7 @@ module.exports = [
     passesIf: covidPercTested(contact)
   {
       return contact.reports.cov(report => report.form === 'screening');
-   },
+  },
   
     date: 'reported'
   },
