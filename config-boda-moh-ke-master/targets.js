@@ -19,7 +19,7 @@ module.exports = [
     
     passesIf: function covidPercTested(contact)
   {
-      return contact.reports.some(report => report.form === 'case_investigation' && report.fields.screening_cov === 'true');
+      return contact.reports.some(report => report.form === 'cov_test' && report.fields.screening.cov === 'true');
   }
   
     date:'reported'
