@@ -18,7 +18,6 @@ module.exports = [
     passesIf: covidPercTested,
   
     date:'reported',
-    idType: 'contact'
   },
 
 ];
