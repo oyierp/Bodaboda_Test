@@ -10,12 +10,11 @@ module.exports = [
     appliesTo: 'contacts',
     appliesToType: ['person'],
     appliesIf: covidPercTested,
- 
-    passesIf: function(contact) 
+
+    passesIf: function(contact)
   {
-     //If there is a screening report, count the contact as pass
       return contact.reports.cov(report => report.form === 'screening');
-    },
+  },
     date: 'reported'
   },
 

@@ -1,5 +1,3 @@
-const extras = require('./nools-extras');
-
 covidPercTested(contact,report) {
   return report.form === 'sampling' && report.fields.screening_cov === 'true');
   },
