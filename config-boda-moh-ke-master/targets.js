@@ -1,3 +1,5 @@
+const extras = require('./nools-extras');
+
 const 
   {
     covidPercTested,
