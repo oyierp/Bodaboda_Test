@@ -1,5 +1,4 @@
 const extras = require('./nools-extras');
-
 const {
   covidPercTested,
  } = extras;
@@ -19,6 +18,7 @@ module.exports = [
     passesIf: covidPercTested,
   
     date:'reported',
+    idType: 'contact'
   },
 
 ];
