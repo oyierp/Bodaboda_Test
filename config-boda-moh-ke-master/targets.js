@@ -17,11 +17,9 @@ module.exports = [
     appliesTo: 'contacts',
     appliesToType: ['person'],
     
-    appliesIf: covidPercTested
-
-   function covidPercTested(contact)
+    passesIf: function covidPercTested(contact)
   {
-  return contact.reports.some(report => report.form === 'sampling' && report.fields.screening_cov === 'true');
+      return contact.reports.some(report => report.form === 'sampling' && report.fields.screening_cov === 'true');
   }
   
     date:'reported'
