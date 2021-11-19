@@ -1,7 +1,7 @@
 const extras = require('./nools-extras');
 
 const {
-  covidPercTested,
+  covidPercTested
 
 } = extras;
 
@@ -21,7 +21,8 @@ module.exports = [
     passesIf: function(contact)
   {
       return contact.reports.cov(report => report.form === 'screening');
-  },
+   },
+  
     date: 'reported'
   },
 
