@@ -1,6 +1,6 @@
 const {
   covidPercTested,
- } = extras;
+ }
 
 module.exports = [
   {
