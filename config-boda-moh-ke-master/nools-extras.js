@@ -1,8 +1,12 @@
-function covidPercTested(contact)
+covidPercTested(contact)
 {
-  return contact.reports.some(report => report.form === 'sampling' && report.fields.screening_cov === 'true');
+  return contact.reports.some(report => report.form === 'screening' && report.fields.cov === 'true');
 }
 
 module.exports = {
   covidPercTested,
 };
+
+
+
+  

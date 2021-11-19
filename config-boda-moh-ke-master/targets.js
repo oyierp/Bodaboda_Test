@@ -1,3 +1,7 @@
+const {
+  covidPercTested,
+ } = extras;
+
 module.exports = [
   {
     id: 'percentage-covid-test',
@@ -10,10 +14,7 @@ module.exports = [
     appliesTo: 'contacts',
     appliesToType: ['person'],
     
-    passesIf: function (contact)
-  {
-      return contact.reports.some(report => report.form === 'screening' && report.fields.cov === 'true');
-  },
+    passesIf: covidPercTested,
   
     date:'reported',
   },
