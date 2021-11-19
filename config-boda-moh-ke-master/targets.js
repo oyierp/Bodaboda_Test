@@ -1,9 +1,7 @@
-const extras = require('./nools-extras');
-
 const 
   {
     covidPercTested,
- }  = extras;
+ }  
 
 module.exports = [
   {
