@@ -1,7 +1,7 @@
 
 function covidPercTested(contact) {
 {
-  return report.form === 'sampling' && report.fields.screening_cov === 'true');
+  return report.form === 'screening' && report.fields.screening_cov === 'true');
 },
 
 module.exports = {
