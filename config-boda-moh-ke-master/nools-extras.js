@@ -3,7 +3,7 @@ function covidPercTested(contact) {
 }
 
 module.exports = {
-  covidPercTested,
+  covidPercTested
 };
 
 
