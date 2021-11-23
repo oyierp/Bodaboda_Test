@@ -11,7 +11,7 @@ module.exports = [
     type: 'percent',
     icon: 'covid-case',
     goal: -1,
-    translation_key: 'targets.covid.title',
+    translation_key: 'targets.posCovid.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
 
     appliesTo: 'contacts',
@@ -27,7 +27,7 @@ module.exports = [
     type: 'percent',
     icon: 'covid-case',
     goal: -1,
-    translation_key: 'targets.covid.title',
+    translation_key: 'targets.negCovid.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
 
     appliesTo: 'contacts',
@@ -39,7 +39,3 @@ module.exports = [
   },
 
 ];
-
-
-
-
