@@ -1,14 +1,13 @@
 const extras = require('./nools-extras');
 
 const {
-    covidPercTested,
-    tbPercTested,
-    pcrPercTested,
+    posCovidPercTested,
+    negCovidPercTested,
   } = extras; 
 
 module.exports = [
   {
-    id: 'percentage-covid-test',
+    id: 'percentage-positive-covid-test',
     type: 'percent',
     icon: 'covid-case',
     goal: -1,
@@ -18,31 +17,15 @@ module.exports = [
     appliesTo: 'contacts',
     appliesToType: ['person'],
  
-    passesIf: covidPercTested,
+    passesIf: posCovidPercTested,
  
     date:'reported',
   },
 
 {
-    id: 'percentage-tb-test',
+    id: 'percentage-negative-covid-test',
     type: 'percent',
-    icon: 'icon-people-person-general@2x',
-    goal: -1,
-    translation_key: 'targets.tb.title',
-    subtitle_translation_key: 'targets.this_month.subtitle',
-
-    appliesTo: 'contacts',
-    appliesToType: ['person'],
- 
-    passesIf: tbPercTested,
- 
-    date:'reported',
-  },
-
-{
-    id: 'percentage-pcr-test',
-    type: 'percent',
-    icon: 'icon-people-man',
+    icon: 'covid-case',
     goal: -1,
     translation_key: 'targets.covid.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
@@ -50,7 +33,7 @@ module.exports = [
     appliesTo: 'contacts',
     appliesToType: ['person'],
  
-    passesIf: pcrPercTested,
+    passesIf: negCovidPercTested,
  
     date:'reported',
   },
