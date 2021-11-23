@@ -1,9 +1,9 @@
 const extras = require('./nools-extras');
 
 const {
-    posCovidPercTested,
-    negCovidPercTested,
-  } = extras; 
+  posCovidPercTested,
+  negCovidPercTested,
+} = extras; 
 
 module.exports = [
   {
@@ -22,7 +22,7 @@ module.exports = [
     date:'reported',
   },
 
-{
+  {
     id: 'percentage-negative-covid-test',
     type: 'percent',
     icon: 'covid-case',
