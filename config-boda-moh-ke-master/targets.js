@@ -10,7 +10,7 @@ module.exports = [
     id: 'percentage-positive-covid-test',
     type: 'percent',
     icon: 'medic-covid-case',
-    goal: 10,
+    goal: -1,
     translation_key: 'targets.posCovid.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
 
@@ -26,7 +26,7 @@ module.exports = [
     id: 'percentage-negative-covid-test',
     type: 'percent',
     icon: 'medic-covid-case',
-    goal: 10,
+    goal: -1,
     translation_key: 'targets.negCovid.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
 
