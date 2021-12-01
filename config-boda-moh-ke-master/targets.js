@@ -6,7 +6,7 @@ const {
   skipChw,
 } = extras; 
 
-module.exports = [
+module.exports = [  
   {
     id: 'percentage-positive-covid-test',
     type: 'percent',
@@ -20,6 +20,7 @@ module.exports = [
     passesIf: posCovidPercTested,
     date:'reported',
   },
+
   {
     id: 'percentage-negative-covid-test',
     type: 'percent',
