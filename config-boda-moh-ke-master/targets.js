@@ -13,9 +13,9 @@ module.exports = [
     goal: -1,
     translation_key: 'targets.posCovid.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
-    appliesTo: 'reports',
+    appliesTo: 'contacts',
     appliesToType: ['person'],
-    passesIf: posCovidPercTested,
+    appliesIf: posCovidPercTested,
     date:'reported',
   },
 
@@ -26,9 +26,9 @@ module.exports = [
     goal: -1,
     translation_key: 'targets.negCovid.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
-    appliesTo: 'reports',
+    appliesTo: 'contacts',
     appliesToType: ['person'],
-    passesIf: negCovidPercTested,
+    appliesIf: negCovidPercTested,
     date:'reported',
   },
 
