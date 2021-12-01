@@ -3,6 +3,7 @@ const extras = require('./nools-extras');
 const {
   posCovidPercTested,
   negCovidPercTested,
+  skipChw,
 } = extras; 
 
 module.exports = [
@@ -13,7 +14,7 @@ module.exports = [
     goal: -1,
     translation_key: 'targets.posCovid.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
-    
+
     type: 'percent',
     appliesTo: 'contacts',
     appliesToType: ['person'],
