@@ -15,7 +15,7 @@ module.exports = [
     subtitle_translation_key: 'targets.this_month.subtitle',
     appliesTo: 'contacts',
     appliesToType: ['person'],
-    passesIf: posCovidPercTested,
+    appliesIf: posCovidPercTested,
     date:'reported',
   },
 
@@ -28,7 +28,7 @@ module.exports = [
     subtitle_translation_key: 'targets.this_month.subtitle',
     appliesTo: 'contacts',
     appliesToType: ['person'],
-    passesIf: negCovidPercTested,
+    appliesIf: negCovidPercTested,
     date:'reported',
   },
 
