@@ -9,7 +9,7 @@ const negCovidPercTested = contact => {
 const skipChw = contact=> {
   //skipping CHWs
   return contact.role !== 'chw';
-  };
+};
 
 module.exports = {
   posCovidPercTested,
