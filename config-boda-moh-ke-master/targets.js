@@ -16,7 +16,7 @@ module.exports = [
     appliesTo: 'contacts',
     appliesToType: ['person'],
     appliesIf: posCovidPercTested,
-    date:'reported',
+    date:'now',
   },
 
   {
@@ -29,7 +29,7 @@ module.exports = [
     appliesTo: 'contacts',
     appliesToType: ['person'],
     appliesIf: negCovidPercTested,
-    date:'reported',
+    date:'now',
   },
 
 ];
