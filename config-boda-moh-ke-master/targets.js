@@ -3,7 +3,6 @@ const extras = require('./nools-extras');
 const {
   posCovidPercTested,
   negCovidPercTested,
-  dateVisited,
 } = extras; 
 
 module.exports = [  
@@ -19,6 +18,7 @@ module.exports = [
     idType: tentVisitDates,
     appliesIf: posCovidPercTested,
     date:'now',
+    idType: 'contact',
   },
 
   {
@@ -31,7 +31,9 @@ module.exports = [
     appliesTo: 'contacts',
     appliesToType: ['person'],
     idType: tentVisitDates,
-    date: 'reported',
+    date: 'now',
+    idType: 'contact',
+
   },
 
   {
@@ -46,6 +48,7 @@ module.exports = [
     idType: tentVisitDates,
     appliesIf: negCovidPercTested,
     date:'now',
+    idType:'contact'
   },
 
 ];
