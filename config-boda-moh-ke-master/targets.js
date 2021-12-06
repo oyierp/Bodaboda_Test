@@ -8,7 +8,7 @@ const {
 module.exports = [  
   {
     id: 'posCovid-test-all-time',
-    type: 'percent',
+    type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
     translation_key: 'targets.posCovid.title',
@@ -21,14 +21,14 @@ module.exports = [
 
   {
     id: 'posCovid-test-this-month',
-    type: 'percent',
+    type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
     translation_key: 'targets.posCovid.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
     appliesTo: 'contacts',
     appliesToType: ['person'],
-    passesIf:posCovidPercTested, 
+    appliesIf:posCovidPercTested, 
     date: 'now',
     idType: 'contact',
 
@@ -36,14 +36,14 @@ module.exports = [
 
   {
     id: 'negCovid-test-all-time',
-    type: 'percent',
+    type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
     translation_key: 'targets.negCovid.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
     appliesTo: 'contacts',
     appliesToType: ['person'],
-    passesIf: negCovidPercTested,
+    appliesIf: negCovidPercTested,
     date:'now',
     idType:'contact'
   },
