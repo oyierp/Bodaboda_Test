@@ -15,7 +15,6 @@ module.exports = [
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType: ['person'],
-    idType: tentVisitDates,
     appliesIf: posCovidPercTested,
     date:'now',
     idType: 'contact',
@@ -30,7 +29,6 @@ module.exports = [
     subtitle_translation_key: 'targets.this_month.subtitle',
     appliesTo: 'contacts',
     appliesToType: ['person'],
-    idType: tentVisitDates,
     date: 'now',
     idType: 'contact',
 
@@ -45,7 +43,6 @@ module.exports = [
     subtitle_translation_key: 'targets.this_month.subtitle',
     appliesTo: 'contacts',
     appliesToType: ['person'],
-    idType: tentVisitDates,
     appliesIf: negCovidPercTested,
     date:'now',
     idType:'contact'
