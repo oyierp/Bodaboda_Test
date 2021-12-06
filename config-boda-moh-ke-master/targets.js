@@ -31,8 +31,8 @@ module.exports = [
     appliesTo: 'contacts',
     appliesToType: ['person'],
     idType: tentVisitDates,
-    date: 'reported'
-  }
+    date: 'reported',
+  },
 
   {
     id: 'negCovid-test-all-time',
