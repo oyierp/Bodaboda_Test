@@ -18,7 +18,7 @@ module.exports = [
     date:'now',
     idType: 'contact',
   },
-
+  
   {
     id: 'posCovid-test-this-month',
     type: 'count',

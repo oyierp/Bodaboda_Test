@@ -12,4 +12,4 @@ const negCovidPercTested = contact => {
 module.exports = {
   posCovidPercTested,
   negCovidPercTested,
- }; 
+}; 
