@@ -7,18 +7,18 @@ const {
 
 module.exports = [  
   {
-    id: 'posCovid-test-all-time',
+    id: 'Covid-test-all-time',
     type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
-    translation_key: 'targets.posCovid.title',
+    translation_key: 'targets.Covid.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType: ['person'],
     date:'now',
     idType: 'contact',
   },
-  
+
   {
     id: 'posCovid-test-this-month',
     type: 'count',
