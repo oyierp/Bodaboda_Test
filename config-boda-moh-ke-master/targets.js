@@ -18,7 +18,7 @@ module.exports = [
     appliesToType:['person'],
     date:'now',
     idType: 'contact'
-   },
+  },
 
   {
     id: 'posCovid-test-this-month',
