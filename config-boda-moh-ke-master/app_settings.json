@@ -681,7 +681,7 @@
         "health_center",
         "clinic"
       ],
-      "icon": "medic-person",
+      "icon": "medic-covid-case",
       "create_form": "form:contact:person:create",
       "edit_form": "form:contact:person:edit",
       "person": true
