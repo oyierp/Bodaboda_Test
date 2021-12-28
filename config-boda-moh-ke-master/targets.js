@@ -1,9 +1,9 @@
 const extras = require('./nools-extras');
 
 const {
-  posCovidPercTested,
-  negCovidPercTested,
-  pendCovidPercTested,
+  posCovidTested,
+  negCovidTested,
+  pendCovidTested,
 } = extras; 
 
 module.exports = [  
@@ -12,37 +12,38 @@ module.exports = [
     type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
-    translation_key: 'targets.Covid.title',
+    translation_key: 'targets.all_timeCovid.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
+    Covid-test-all-time
     appliesTo: 'contacts',
-    appliesToType:['person'],
+    appliesToType:['suspected_case'],
     date:'now',
     idType: 'contact'
   },
 
   {
-    id: 'posCovid-test-this-month',
+    id: 'posCovid-this-month',
     type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
     translation_key: 'targets.posCovid.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
     appliesTo: 'contacts',
-    appliesToType:['person'],
-    appliesIf:posCovidPercTested, 
+    appliesToType:['suspected_case'],
+    appliesIf:posCovidTested, 
     date: 'now',
   },
 
   {
-    id: 'negCovid-test-all-time',
+    id: 'negCovid-this-month',
     type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
     translation_key: 'targets.negCovid.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
     appliesTo: 'contacts',
-    appliesToType:['person'],
-    appliesIf: negCovidPercTested,
+    appliesToType:['suspected_case'],
+    appliesIf: negCovidTested,
     date:'now',
   },
   
@@ -54,8 +55,8 @@ module.exports = [
     translation_key: 'targets.pendCovid.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
     appliesTo: 'contacts',
-    appliesToType:['person'],
-    appliesIf: pendCovidPercTested,
+    appliesToType:['suspected_case'],
+    appliesIf: pendCovidTested,
     date:'now',
   },
 

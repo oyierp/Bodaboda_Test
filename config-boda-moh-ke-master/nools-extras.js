@@ -1,17 +1,18 @@
-const posCovidPercTested = (contact) => {
+const posCovidTested = (contact) => {
   return contact.reports.some(report => report.form === 'case_investigation' && report.fields.testing.cov_test === 'Positive');
 };
 
-const negCovidPercTested = (contact) => {
+const negCovidTested = (contact) => {
   return contact.reports.some(report => report.form === 'case_investigation' && report.fields.testing.cov_test === 'Negative');
 };
 
-const pendCovidPercTested = (contact) => {
+const pendCovidTested = (contact) => {
   return contact.reports.some(report => report.form === 'case_investigation' && report.fields.testing.cov_test === 'Pending');
 };
 
 module.exports = {
-  posCovidPercTested,
-  negCovidPercTested,
-  pendCovidPercTested,
+  posCovidTested,
+  negCovidTested,
+  pendCovidTested,
+
 }; 
