@@ -28,11 +28,11 @@ module.exports = [
     icon: 'medic-covid-case',
     goal: -1,
     translation_key: 'targets.posCovid.title',
-    subtitle_translation_key: 'targets.this_month.subtitle',
+    subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
     appliesIf:posCovidTested, 
-    date: 'reported',
+    date: 'now',
   },
 
   {
@@ -41,11 +41,11 @@ module.exports = [
     icon: 'medic-covid-case',
     goal: -1,
     translation_key: 'targets.negCovid.title',
-    subtitle_translation_key: 'targets.this_month.subtitle',
+    subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
     appliesIf: negCovidTested,
-    date:'reported',
+    date:'now',
   },
   
   {
