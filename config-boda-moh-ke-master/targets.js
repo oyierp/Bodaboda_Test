@@ -6,7 +6,7 @@ const {
   pendCovidTested,
   incCovidTested,
   emptCovidTested,
-  } = extras; 
+      } = extras; 
 
 module.exports = [  
   {
@@ -58,10 +58,10 @@ module.exports = [
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
     appliesIf: function(contact){
-        return pendCovidTested (contact) || incCovidTested (contact) || emptCovidTested(contact);
-  },
+          return pendCovidTested (contact) || incCovidTested (contact) || emptCovidTested(contact);
+   },
     date:'now',
-  },
+ },
     
 ];
 
