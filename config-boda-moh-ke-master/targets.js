@@ -32,7 +32,7 @@ module.exports = [
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
     appliesIf:posCovidTested, 
-    date: 'now',
+    date: 'reported',
   },
 
   {
@@ -45,7 +45,7 @@ module.exports = [
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
     appliesIf: negCovidTested,
-    date:'now',
+    date:'reported',
   },
   
   {
@@ -54,7 +54,7 @@ module.exports = [
     icon: 'medic-covid-case',
     goal: -1,
     translation_key: 'targets.pendCovid.title',
-    subtitle_translation_key: 'targets.this_month.subtitle',
+    subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
     appliesIf: pendCovidTested,
@@ -67,7 +67,7 @@ module.exports = [
     icon: 'medic-covid-case',
     goal: -1,
     translation_key: 'targets.incCovid.title',
-    subtitle_translation_key: 'targets.this_month.subtitle',
+    subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
     appliesIf: incCovidTested,
@@ -79,7 +79,7 @@ module.exports = [
     icon: 'medic-covid-case',
     goal: -1,
     translation_key: 'targets.emptCovid.title',
-    subtitle_translation_key: 'targets.this_month.subtitle',
+    subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
     appliesIf: emptCovidTested,
