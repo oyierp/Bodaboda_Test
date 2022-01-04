@@ -3,10 +3,10 @@ const extras = require('./nools-extras');
 const {
   posCovidTested,
   negCovidTested,
-  emptCovidTested,
+  pendCovidTested,
   incCovidTested,
-  pendIncCovidTested,
-} = extras; 
+  emptCovidTested,
+  } = extras; 
 
 module.exports = [  
   {
@@ -57,8 +57,8 @@ module.exports = [
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
-    idType: contact => {
-        const pendIncCovidTested = (contact) => pendCovidTested(contact) || incCovidTested(contact) || emptCovidTested(contact);
+    appliesIf: function(contact){
+        return pendCovidTested (contact) || incCovidTested (contact) || emptCovidTested(contact);
   },
     date:'now',
   },

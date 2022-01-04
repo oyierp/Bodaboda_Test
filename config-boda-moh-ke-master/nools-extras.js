@@ -15,14 +15,14 @@ const incCovidTested = (contact) => {
 };
 
 const emptCovidTested = (contact) => {
-  return contact.reports.some(report => report.form === 'case_investigation' && report.fields.testing && report.fields.testing.cov_test === '' );
+  return contact.reports.some(report => report.form === 'case_investigation' && report.fields.testing && report.fields.testing.cov_test === ' ' );
 };
 
 module.exports = {
   posCovidTested,
   negCovidTested,
-  emptCovidTested,
-  incCovidTested,
   pendCovidTested,
+  incCovidTested,
+  emptCovidTested,
 }; 
 
