@@ -6,6 +6,7 @@ const {
   pendCovidTested,
   incCovidTested,
   emptCovidTested,
+  pendIncCovidTested,
 } = extras; 
 
 module.exports = [  
@@ -57,11 +58,9 @@ module.exports = [
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
-    appliesIf: const pendIncCovidTested = (contact) => pendCovidTested(contact) || incCovidTested(contact) || emptCovidTested(contact),
+    appliesIf: pendIncCovidTested,
     date:'now',
   },
-  
-  appliesIf: incCovidTested,
-  appliesIf: emptCovidTested,
-  
+    
 ];
+

@@ -4,7 +4,7 @@ const posCovidTested = (contact) => {
 
 const negCovidTested = (contact) => {
   return contact.reports.some(report => report.form === 'case_investigation' && report.fields.testing && report.fields.testing.cov_test === 'Negative');
-  };
+};
 
 const pendCovidTested = (contact) => {
   return contact.reports.some(report => report.form === 'case_investigation' && report.fields.testing && report.fields.testing.cov_test === 'Pending');
@@ -18,12 +18,16 @@ const emptCovidTested = (contact) => {
   return contact.reports.some(report => report.form === 'case_investigation' && report.fields.testing && report.fields.testing.cov_test === '' );
 };
 
+const pendIncCovidTested = (contact) =>{ 
+  return pendCovidTested(contact) || incCovidTested(contact) || emptCovidTested(contact);
+};
+
 module.exports = {
   posCovidTested,
   negCovidTested,
   pendCovidTested,
   incCovidTested,
   emptCovidTested,
-
+  pendIncCovidTested,
 }; 
 
