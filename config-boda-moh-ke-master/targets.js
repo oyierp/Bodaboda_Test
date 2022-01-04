@@ -3,6 +3,8 @@ const extras = require('./nools-extras');
 const {
   posCovidTested,
   negCovidTested,
+  incCovidTested,
+  emptCovidTested,
   pendIncCovidTested,
 } = extras; 
 
