@@ -6,6 +6,8 @@ const {
   pendCovidTested,
   incCovidTested,
   emptCovidTested,
+  mksCovidTested,
+  kjdCovidTested,
 } = extras; 
 
 module.exports = [  
@@ -49,11 +51,11 @@ module.exports = [
   },
   
   {
-    id: 'pendIcompCovid-test-all-time',
+    id: 'pendIncompCovid-test-all-time',
     type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
-    translation_key: 'targets.pendIcompCovid.title',
+    translation_key: 'targets.pendIncompCovid.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
@@ -62,5 +64,30 @@ module.exports = [
     },
     date:'now',
   },
-    
+ 
+  {
+    id: 'mksCovid-test-all-time',
+    type: 'count',
+    icon: 'medic-covid-case',
+    goal: -1,
+    translation_key: 'targets.mksCovid.title',
+    subtitle_translation_key: 'targets.all_time.subtitle',
+    appliesTo: 'contacts',
+    appliesToType:['suspected_case'],
+    appliesIf: mksCovidTested,
+    date:'now',
+  },
+  {
+    id: 'kjdCovid-test-all-time',
+    type: 'count',
+    icon: 'medic-covid-case',
+    goal: -1,
+    translation_key: 'targets.kjdCovid.title',
+    subtitle_translation_key: 'targets.all_time.subtitle',
+    appliesTo: 'contacts',
+    appliesToType:['suspected_case'],
+    appliesIf: kjdCovidTested,
+    date:'now',
+  },   
+
 ];
