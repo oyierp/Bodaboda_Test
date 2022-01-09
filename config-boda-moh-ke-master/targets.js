@@ -58,7 +58,7 @@ module.exports = [
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
-    appliesIf: negCovidTested,
+    appliesIf: negCovidTested, 
     date:'now',
   },
   
@@ -84,10 +84,11 @@ module.exports = [
     goal: -1,
     translation_key: 'targets.mksCovid.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
-    appliesTo: 'contacts',
+    appliesTo: 'reports',
     appliesToType:['suspected_case'],
     appliesIf: mksCovidTested,
     date:'now',
+    idType: 'contact',
   },
   {
     id: 'kjdCovid-test-all-time',
@@ -96,10 +97,11 @@ module.exports = [
     goal: -1,
     translation_key: 'targets.kjdCovid.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
-    appliesTo: 'contacts',
+    appliesTo: 'reports',
     appliesToType:['suspected_case'],
     appliesIf: kjdCovidTested,
     date:'now',
+    idType: 'contact',
   },   
 
 ];
