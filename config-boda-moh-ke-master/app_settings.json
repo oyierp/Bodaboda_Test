@@ -667,8 +667,9 @@
       "create_form": "form:contact:national_officer:create",
       "edit_form": "form:contact:national_officer:edit",
       "person": true
-    },
-    {
+    }
+  
+  {
       "id": "person",
       "name_key": "contact.type.person",
       "group_key": "contact.type.person.plural",
@@ -679,15 +680,14 @@
         "district_hospital",
         "health_center",
         "clinic",
-        "county_office",
+	      "county_office",
         "anational_office"
       ],
       "icon": "medic-person",
       "create_form": "form:contact:person:create",
       "edit_form": "form:contact:person:edit",
       "person": true
-    },
-  
+    }
   ],
 
   "setup_complete": true,
