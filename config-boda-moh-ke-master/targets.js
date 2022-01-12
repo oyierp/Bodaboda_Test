@@ -85,11 +85,12 @@ module.exports = [
     translation_key: 'targets.mksCovid.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'reports',
-    appliesToType:['suspected_case'],
-    appliesIf: mksCovidTested,
-    date:'now',
-    idType: 'contact',
-  },
+    appliesToType:['case_investigation'],
+    appliesIf: function(contact){
+      return mksCovidTested(contact);
+      },
+
+    },
   {
     id: 'kjdCovid-test-all-time',
     type: 'count',
@@ -98,10 +99,10 @@ module.exports = [
     translation_key: 'targets.kjdCovid.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'reports',
-    appliesToType:['suspected_case'],
+    appliesToType:['case_investigation'],
     appliesIf: kjdCovidTested,
     date:'now',
-    idType: 'contact',
+    
   },   
 
 ];
