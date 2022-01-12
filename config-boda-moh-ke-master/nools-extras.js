@@ -1,5 +1,5 @@
 const allCovidTested = (contact) => { 
-  return contact.reports.some(report => unique(report.form === 'case_investigation') && report.fields.testing);
+  return contact.reports.some(report => report.form === 'case_investigation' && report.fields.testing && report.fields.testing.cov_test);
 };
 const posCovidTested = (contact) => {
   return contact.reports.some(report => report.form === 'case_investigation' && report.fields.testing && report.fields.testing.cov_test === 'Positive');
@@ -22,13 +22,11 @@ const emptCovidTested = (contact) => {
 };
 
 const mksCovidTested = (contact) => {
-  return contact.parent && contact.parent.parent && contact.parent.name === 'DHARC-MKS'
-   && contact.reports.some(report => report.form === 'case_investigation');
+  return contact.parent && contact.parent._id === '2a0b7d2a-05a0-4b67-a6e9-0248429615ab';
 };
 
 const kjdCovidTested = (contact) => {
-  return contact.parent && contact.parent.parent && contact.parent.name === 'DHARC-KJD'
-   && contact.reports.some(report => report.form === 'case_investigation');
+  return contact.parent && contact.parent._id === '2a0b7d2a-05a0-4b67-a6e9-0248429615ab';
 };
 
 module.exports = {
