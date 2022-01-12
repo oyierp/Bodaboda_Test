@@ -36,6 +36,7 @@ module.exports = [
     appliesIf:allCovidTested, 
     date:'now',
   },
+  
   {
     id: 'posCovid-this-month',
     type: 'count',
@@ -88,21 +89,20 @@ module.exports = [
     appliesToType:['case_investigation'],
     appliesIf: function(contact){
       return mksCovidTested(contact);
-      },
-
-    },
+    }, 
+    date:'now',
+  },
+  
   {
     id: 'kjdCovid-test-all-time',
     type: 'count',
     icon: 'medic-covid-case',
-    goal: -1,
     translation_key: 'targets.kjdCovid.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'reports',
     appliesToType:['case_investigation'],
     appliesIf: kjdCovidTested,
     date:'now',
-    
-  },   
-
+  },
 ];
+
