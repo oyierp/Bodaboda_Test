@@ -22,11 +22,11 @@ const emptCovidTested = (contact) => {
 };
 
 const mksCovidTested = (contact) => {
-  return contact.parent && contact.parent._id === '2a0b7d2a-05a0-4b67-a6e9-0248429615ab';
+  return contact.parent && contact.parent._id === 'be17a990-9b88-47b0-9b86-d99fa9674768';
 };
 
 const kjdCovidTested = (contact) => {
-  return contact.parent && contact.parent._id === '2a0b7d2a-05a0-4b67-a6e9-0248429615ab';
+  return contact.parent && contact.parent._id === 'be17a990-9b88-47b0-9b86-d99fa9674768';
 };
 
 module.exports = {
