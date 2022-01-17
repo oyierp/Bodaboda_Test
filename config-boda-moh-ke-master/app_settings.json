@@ -571,7 +571,9 @@
       "primary_contact_key": "trace_case.field.contact",
       "parents": [
         "rapid_response_team",
-        "response_squad"
+        "response_squad",
+        "county_office",
+        "anational_office"
       ],
       "icon": "medic-covid-suspect",
       "create_form": "form:contact:suspected_case:create",
@@ -669,7 +671,7 @@
       "person": true
     }
   
-  {
+    {
       "id": "person",
       "name_key": "contact.type.person",
       "group_key": "contact.type.person.plural",
@@ -898,3 +900,4 @@
   "registrations": [],
   "schedules": []
 }
+
