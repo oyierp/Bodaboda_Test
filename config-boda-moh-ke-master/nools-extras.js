@@ -22,11 +22,13 @@ const emptCovidTested = (contact) => {
 };
 
 const mksCovidTested = (contact) => {
-  return contact.parent && contact.parent._id === 'be17a990-9b88-47b0-9b86-d99fa9674768';
+  return contact.parent && contact.parent._id === 'be17a990-9b88-47b0-9b86-d99fa9674768'&&
+    report.fields.testing && report.fields.testing.cov_test === 'Positive';
 };
 
 const kjdCovidTested = (contact) => {
-  return contact.parent && contact.parent._id === 'be17a990-9b88-47b0-9b86-d99fa9674768';
+  return contact.parent && contact.parent._id === 'be17a990-9b88-47b0-9b86-d99fa9674768' && 
+    report.fields.testing && report.fields.testing.cov_test === 'Positive' ;
 };
 
 module.exports = {

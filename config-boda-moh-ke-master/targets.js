@@ -87,9 +87,7 @@ module.exports = [
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'reports',
     appliesToType:['case_investigation'],
-    appliesIf: function(contact){
-      return mksCovidTested(contact);
-    }, 
+    appliesIf: mksCovidTested, 
     date:'now',
   },
   
@@ -97,6 +95,7 @@ module.exports = [
     id: 'kjdCovid-test-all-time',
     type: 'count',
     icon: 'medic-covid-case',
+    goal:-1,
     translation_key: 'targets.kjdCovid.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'reports',
