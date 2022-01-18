@@ -66,41 +66,17 @@ module.exports = [
   },
   
   {
-    id: 'pendCovid-test-all-time',
+    id: 'pendIncompCovid-test-all-time',
     type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
-    translation_key: 'targets.pendCovid.title',
+    translation_key: 'targets.pendIncompCovid.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
-    appliesIf: pendCovidTested,
-    date:'now',
-  },
-  
-  {
-    id: 'incCovid-test-all-time',
-    type: 'count',
-    icon: 'medic-covid-case',
-    goal: -1,
-    translation_key: 'targets.incCovid.title',
-    subtitle_translation_key: 'targets.all_time.subtitle',
-    appliesTo: 'contacts',
-    appliesToType:['suspected_case'],
-    appliesIf: incCovidTested,
-    date:'now',
-  },
-  
-  {
-    id: 'emptCovid-test-all-time',
-    type: 'count',
-    icon: 'medic-covid-case',
-    goal: -1,
-    translation_key: 'targets.emptCovid.title',
-    subtitle_translation_key: 'targets.all_time.subtitle',
-    appliesTo: 'contacts',
-    appliesToType:['suspected_case'],
-    appliesIf: emptCovidTested,
+    appliesIf: function(contact){
+      return pendCovidTested (contact) || incCovidTested (contact) || emptCovidTested(contact);
+    },
     date:'now',
   },
   
@@ -118,15 +94,43 @@ module.exports = [
   },
   
   {
-    id: 'kjdCovid-test-all-time',
+    id: 'posCovidKjd-test-all-time',
     type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
-    translation_key: 'targets.kjdCovid.title',
+    translation_key: 'targets.posCovidKjd.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
     appliesIf: kjdCovidTested,
     date:'now',
   },
+
+  {
+    id: 'posCovidMks-test-all-time',
+    type: 'count',
+    icon: 'medic-covid-case',
+    goal: -1,
+    translation_key: 'targets.posCovidMks.title',
+    subtitle_translation_key: 'targets.all_time.subtitle',
+    appliesTo: 'contacts',
+    appliesToType:['suspected_case'],
+    appliesIf: posCovidTestedMks,
+    date:'now',
+  },
+  
+  {
+    id: 'posCovidKjd-test-all-time',
+    type: 'count',
+    icon: 'medic-covid-case',
+    goal: -1,
+    translation_key: 'targets.posCovidkKjd.title',
+    subtitle_translation_key: 'targets.all_time.subtitle',
+    appliesTo: 'contacts',
+    appliesToType:['suspected_case'],
+    appliesIf: posCovidTestedKjd,
+    date:'now',
+  },
+
+
 ];
