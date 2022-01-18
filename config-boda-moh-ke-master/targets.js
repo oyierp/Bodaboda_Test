@@ -78,7 +78,7 @@ module.exports = [
     appliesToType:['suspected_case'],
     appliesIf: function(contact){
       return pendCovidTested (contact) || incCovidTested (contact) || emptCovidTested(contact);
-  },
+    },
     date:'now',
   },
   
@@ -93,7 +93,7 @@ module.exports = [
     appliesToType:['suspected_case'],
     appliesIf: mksCovidTested,
     date:'now',
-   },
+  },
 
   {
     id: 'kjdCovid-test-all-time',
@@ -106,7 +106,7 @@ module.exports = [
     appliesToType:['suspected_case'],
     appliesIf: kjdCovidTested,
     date:'now',
-   },
+  },
   
   {
     id: 'posCovidTestedMks-test-all-time',
@@ -119,7 +119,7 @@ module.exports = [
     appliesToType:['suspected_case'],
     appliesIf: posCovidTestedMks,
     date:'now',
-   },
+  },
 
   
   {
@@ -133,7 +133,7 @@ module.exports = [
     appliesToType:['suspected_case'],
     appliesIf: posCovidTestedKjd,
     date:'now',
-   },
+  },
 
 
 ];
