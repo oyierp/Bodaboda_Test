@@ -9,6 +9,8 @@ const {
   emptCovidTested,
   mksCovidTested,
   kjdCovidTested,
+  posCovidTestedMks,
+  posCovidTestedKjd,
 } = extras; 
 
 module.exports = [  
@@ -21,20 +23,6 @@ module.exports = [
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
-    date:'now',
-    idType: 'contact'
-  },
-
-  {
-    id: 'covid-test-all-time',
-    type: 'count',
-    icon: 'medic-covid-case',
-    goal: -1,
-    translation_key: 'targets.all_timeCovid.title',
-    subtitle_translation_key: 'targets.all_time.subtitle',
-    appliesTo: 'contacts',
-    appliesToType:['suspected_case'],
-    appliesIf:allCovidTested, 
     date:'now',
     idType: 'contact'
   },
@@ -92,9 +80,22 @@ module.exports = [
     appliesIf: mksCovidTested,
     date:'now',
   },
+
+  {
+    id: 'kjdCovid-test-all-time',
+    type: 'count',
+    icon: 'medic-covid-case',
+    goal: -1,
+    translation_key: 'targets.kjdCovid.title',
+    subtitle_translation_key: 'targets.all_time.subtitle',
+    appliesTo: 'contacts',
+    appliesToType:['suspected_case'],
+    appliesIf: kjdCovidTested,
+    date:'now',
+  },
   
   {
-    id: 'posCovidKjd-test-all-time',
+    id: 'posCovidTestedMks-test-all-time',
     type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
@@ -102,22 +103,10 @@ module.exports = [
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
-    appliesIf: kjdCovidTested,
-    date:'now',
-  },
-
-  {
-    id: 'posCovidMks-test-all-time',
-    type: 'count',
-    icon: 'medic-covid-case',
-    goal: -1,
-    translation_key: 'targets.posCovidMks.title',
-    subtitle_translation_key: 'targets.all_time.subtitle',
-    appliesTo: 'contacts',
-    appliesToType:['suspected_case'],
     appliesIf: posCovidTestedMks,
     date:'now',
   },
+
   
   {
     id: 'posCovidKjd-test-all-time',
