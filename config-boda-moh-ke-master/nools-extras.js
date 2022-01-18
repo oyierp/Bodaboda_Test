@@ -22,13 +22,19 @@ const emptCovidTested = (contact) => {
 };
 
 const mksCovidTested = (contact) => {
-  return contact.parent && contact.parent._id === 'be17a990-9b88-47b0-9b86-d99fa9674768'&&
-    report.fields.testing && report.fields.testing.cov_test === 'Positive';
-};
+  return return  contact.reports.some(report => ((report.form === 'case_investigation' && report.contact.parent._id === 'be17a990-9b88-47b0-9b86-d99fa9674768') && report.fields.testing && report.fields.testing.cov_test);
+  };
 
 const kjdCovidTested = (contact) => {
-  return contact.parent && contact.parent._id === 'be17a990-9b88-47b0-9b86-d99fa9674768' && 
-    report.fields.testing && report.fields.testing.cov_test === 'Positive' ;
+  return  contact.reports.some(report => ((report.form === 'case_investigation' && report.contact.parent._id === '290cddae-3b9a-435b-82f0-40bb4614403d') && report.fields.testing && report.fields.testing.cov_test);
+};
+
+const posCovidTestedMks = (contact) => {
+  return return  contact.reports.some(report => ((report.form === 'case_investigation' && report.contact.parent._id === 'be17a990-9b88-47b0-9b86-d99fa9674768') && report.fields.testing && report.fields.testing.cov_test ==='Positive');
+  };
+
+const posCovidTestedKjd = (contact) => {
+  return  contact.reports.some(report => ((report.form === 'case_investigation' && report.contact.parent._id === '290cddae-3b9a-435b-82f0-40bb4614403d') && report.fields.testing && report.fields.testing.cov_test ==='Positive');
 };
 
 module.exports = {
@@ -38,6 +44,10 @@ module.exports = {
   pendCovidTested,
   incCovidTested,
   emptCovidTested,
+  mksCovidTested,
+  kjdCovidTested,
+  posCovidTestedMks,
+  posCovidTestedKjd,
   mksCovidTested,
   kjdCovidTested,
 }; 

@@ -9,6 +9,10 @@ const {
   emptCovidTested,
   mksCovidTested,
   kjdCovidTested,
+  posCovidTestedMks,
+  posCovidTestedKjd,
+  mksCovidTested,
+  kjdCovidTested,
 } = extras; 
 
 module.exports = [  
@@ -25,18 +29,31 @@ module.exports = [
   },
 
   {
-    id: 'covid-test-all-time',
+    id: 'kajiado-tests-all-time',
     type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
-    translation_key: 'targets.all_timeCovid.title',
+    translation_key: 'targets.kjd_all_timeTests.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
-    appliesIf:allCovidTested, 
+    appliesIf:kjdCovidTested, 
     date:'now',
   },
-  
+
+  {
+    id: 'machakos-tests-all-time',
+    type: 'count',
+    icon: 'medic-covid-case',
+    goal: -1,
+    translation_key: 'targets.mks_all_timeTests.title',
+    subtitle_translation_key: 'targets.all_time.subtitle',
+    appliesTo: 'contacts',
+    appliesToType:['suspected_case'],
+    appliesIf:posMksCovidTested, 
+    date:'now',
+  },
+
   {
     id: 'posCovid-this-month',
     type: 'count',
@@ -79,28 +96,28 @@ module.exports = [
   },
  
   {
-    id: 'mksCovid-test-all-time',
+    id: 'posCovidMks-test-all-time',
     type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
-    translation_key: 'targets.mksCovid.title',
+    translation_key: 'targets.posCovidMks.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'reports',
     appliesToType:['case_investigation'],
-    appliesIf: mksCovidTested, 
+    appliesIf: posCovidTestedMks,
     date:'now',
   },
   
   {
-    id: 'kjdCovid-test-all-time',
+    id: 'posCovidKjd-test-all-time',
     type: 'count',
     icon: 'medic-covid-case',
     goal:-1,
-    translation_key: 'targets.kjdCovid.title',
+    translation_key: 'targets.posCovidKjd.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'reports',
     appliesToType:['case_investigation'],
-    appliesIf: kjdCovidTested,
+    appliesIf: posCovidTestedKjd,
     date:'now',
   },
 ];
