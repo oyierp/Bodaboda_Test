@@ -28,6 +28,20 @@ module.exports = [
   },
 
   {
+    id: 'covid-test-all-time',
+    type: 'count',
+    icon: 'medic-covid-case',
+    goal: -1,
+    translation_key: 'targets.all_timeCovid.title',
+    subtitle_translation_key: 'targets.all_time.subtitle',
+    appliesTo: 'contacts',
+    appliesToType:['suspected_case'],
+    appliesIf:allCovidTested, 
+    date:'now',
+    idType: 'contact'
+  },
+
+  {
     id: 'posCovid-this-month',
     type: 'count',
     icon: 'medic-covid-case',
