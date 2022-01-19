@@ -8,9 +8,13 @@ const {
   incCovidTested,
   emptCovidTested,
   mksCovidTested,
+  nrbCovidTested,
+  kbuCovidTested,
   kjdCovidTested,
   posCovidTestedMks,
   posCovidTestedKjd,
+  posCovidTestedNrb,
+  posCovidTestedKbu
 } = extras; 
 
 module.exports = [  
@@ -107,6 +111,32 @@ module.exports = [
     appliesIf: kjdCovidTested,
     date:'now',
   },
+
+  {
+    id: 'nrbCovid-test-all-time',
+    type: 'count',
+    icon: 'medic-covid-case',
+    goal: -1,
+    translation_key: 'targets.nrbCovid.title',
+    subtitle_translation_key: 'targets.all_time.subtitle',
+    appliesTo: 'contacts',
+    appliesToType:['suspected_case'],
+    appliesIf: nrbCovidTested,
+    date:'now',
+  },
+
+  {
+    id: 'kbuCovid-test-all-time',
+    type: 'count',
+    icon: 'medic-covid-case',
+    goal: -1,
+    translation_key: 'targets.kbuCovid.title',
+    subtitle_translation_key: 'targets.all_time.subtitle',
+    appliesTo: 'contacts',
+    appliesToType:['suspected_case'],
+    appliesIf: kbuCovidTested,
+    date:'now',
+  },
   
   {
     id: 'posCovidTestedMks-test-all-time',
@@ -121,7 +151,6 @@ module.exports = [
     date:'now',
   },
 
-  
   {
     id: 'posCovidKjd-test-all-time',
     type: 'count',
@@ -135,5 +164,30 @@ module.exports = [
     date:'now',
   },
 
+  { 
+    id: 'posCovidNrb-test-all-time',
+    type: 'count',
+    icon: 'medic-covid-case',
+    goal: -1,
+    translation_key: 'targets.posCovidNrb.title',
+    subtitle_translation_key: 'targets.all_time.subtitle',
+    appliesTo: 'contacts',
+    appliesToType:['suspected_case'],
+    appliesIf: posCovidTestedNrb,
+    date:'now',
+  },
+
+  { 
+    id: 'posCovidKbu-test-all-time',
+    type: 'count',
+    icon: 'medic-covid-case',
+    goal: -1,
+    translation_key: 'targets.posCovidKbu.title',
+    subtitle_translation_key: 'targets.all_time.subtitle',
+    appliesTo: 'contacts',
+    appliesToType:['suspected_case'],
+    appliesIf: posCovidTestedKbu,
+    date:'now',
+  },
 
 ];
