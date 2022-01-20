@@ -46,7 +46,7 @@ module.exports = [
   },
 
   {
-    id: 'posCovid-this-month',
+    id: 'posCovid-all-time',
     type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
@@ -59,7 +59,7 @@ module.exports = [
   },
 
   {
-    id: 'negCovid-this-month',
+    id: 'negCovid-all-time',
     type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
