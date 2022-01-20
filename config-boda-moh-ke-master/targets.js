@@ -139,7 +139,7 @@ module.exports = [
   },
   
   {
-    id: 'posCovidMks-test-all-time',
+    id: 'posCovidTestedMks-test-all-time',
     type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
