@@ -139,7 +139,7 @@ module.exports = [
   },
   
   {
-    id: 'posCovidTestedMks-test-all-time',
+    id: 'posCovidMks-test-all-time',
     type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
@@ -156,7 +156,7 @@ module.exports = [
     type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
-    translation_key: 'targets.posCovidkKjd.title',
+    translation_key: 'targets.posCovidKjd.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
@@ -186,7 +186,7 @@ module.exports = [
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
-    appliesIf: posCovidTestedKbu,
+    appliesIf: posCovidTestedKbu, 
     date:'now',
   },
 
