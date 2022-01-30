@@ -522,53 +522,6 @@
     },
 
     {
-      "id": "forwarded_case",
-      "name_key": "contact.type.forwarded_case",
-      "group_key": "contact.type.forwarded_case.plural",
-      "create_key": "contact.type.forwarded_case.new",
-      "edit_key": "contact.type.place.edit",
-      "primary_contact_key": "forwarded_case.field.contact",
-      "parents": [
-        "county_office",
-        "anational_office"
-      ],
-      "icon": "medic-covid-case",
-      "edit_form": "form:contact:forwarded_case:edit"
-    },
-
-    {
-      "id": "response_squad",
-      "name_key": "contact.type.contact_tracing_team",
-      "group_key": "contact.type.contact_tracing_team.plural",
-      "create_key": "contact.type.contact_tracing_team.new",
-      "edit_key": "contact.type.place.edit",
-      "primary_contact_key": "contact_tracing_team.field.contact",
-      "parents": [
-        "county_office"
-      ],
-      "icon": "medic-response-squad",
-      "create_form": "form:contact:response_squad:create",
-      "edit_form": "form:contact:response_squad:edit",
-      "count_visits": true
-    },
-
-    {
-      "id": "trace_case",
-      "name_key": "contact.type.trace_case",
-      "group_key": "contact.type.trace_case.plural",
-      "create_key": "contact.type.trace_case.new",
-      "edit_key": "contact.type.place.edit",
-      "primary_contact_key": "trace_case.field.contact",
-      "parents": [
-        "rapid_response_team",
-        "response_squad"
-      ],
-      "icon": "medic-covid-case",
-      "edit_form": "form:contact:trace_case:edit",
-      "count_visits": true
-    },
-
-    {
       "id": "suspected_case",
       "name_key": "contact.type.suspected_case",
       "group_key": "contact.type.suspected_case.plural",
@@ -577,7 +530,6 @@
       "primary_contact_key": "trace_case.field.contact",
       "parents": [
         "rapid_response_team",
-        "response_squad",
         "county_office",
         "anational_office"
       ],
@@ -588,38 +540,6 @@
     },
 
     {
-      "id": "trace_contact",
-      "name_key": "contact.type.patient",
-      "group_key": "contact.type.patient.plural",
-      "create_key": "contact.type.patient.new",
-      "primary_contact_key": "place.field.contact",
-      "parents": [
-        "trace_case",
-        "suspected_case"
-      ],
-      "icon": "medic-person",
-      "create_form": "form:contact:trace_contact:create",
-      "edit_form": "form:contact:trace_contact:edit",
-      "person": true
-    },
-
-    {
-      "id": "response_squad_member",
-      "name_key": "contact.type.contact_tracing_team_member",
-      "group_key": "contact.type.contact_tracing_team_member.plural",
-      "create_key": "contact.type.contact_tracing_team_member.new",
-      "edit_key": "contact.type.contact_tracing_team_member.edit",
-      "primary_contact_key": "clinic.field.contact",
-      "parents": [
-        ""
-      ],
-      "icon": "medic-health-worker",
-      "create_form": "form:contact:contact_tracing_team_member:create",
-      "edit_form": "form:contact:contact_tracing_team_member:edit",
-      "person": true
-    },
-
-    {
       "id": "rapid_response_team_member",
       "name_key": "contact.type.rapid_response_team_member",
       "group_key": "contact.type.rapid_response_team_member.plural",
@@ -627,27 +547,11 @@
       "edit_key": "contact.type.rapid_response_team_member.edit",
       "primary_contact_key": "clinic.field.contact",
       "parents": [
-        ""
+        "rapid_response_team"
       ],
       "icon": "medic-health-worker",
       "create_form": "form:contact:rapid_response_team_member:create",
       "edit_form": "form:contact:rapid_response_team_member:edit",
-      "person": true
-    },
-
-    {
-      "id": "sub_county_officer",
-      "name_key": "contact.type.sub_county_officer",
-      "group_key": "contact.type.sub_county_officer.plural",
-      "create_key": "contact.type.sub_county_officer.new",
-      "edit_key": "contact.type.sub_county_officer.edit",
-      "primary_contact_key": "clinic.field.contact",
-      "parents": [
-        ""
-      ],
-      "icon": "medic-health-worker",
-      "create_form": "form:contact:sub_county_officer:create",
-      "edit_form": "form:contact:sub_county_officer:edit",
       "person": true
     },
 
@@ -659,7 +563,7 @@
       "edit_key": "contact.type.county_officer.edit",
       "primary_contact_key": "clinic.field.contact",
       "parents": [
-        ""
+        "county_office"
       ],
       "icon": "medic-health-worker",
       "create_form": "form:contact:county_officer:create",
@@ -675,31 +579,11 @@
       "edit_key": "contact.type.national_officer.edit",
       "primary_contact_key": "clinic.field.contact",
       "parents": [
-        ""
+        "national_office"
       ],
       "icon": "medic-health-worker",
       "create_form": "form:contact:national_officer:create",
       "edit_form": "form:contact:national_officer:edit",
-      "person": true
-    },
-  
-    {
-      "id": "person",
-      "name_key": "contact.type.person",
-      "group_key": "contact.type.person.plural",
-      "create_key": "contact.type.person.new",
-      "edit_key": "contact.type.person.edit",
-      "primary_contact_key": "clinic.field.contact",
-      "parents": [
-        "district_hospital",
-        "health_center",
-        "clinic",
-	      "county_office",
-        "anational_office"
-      ],
-      "icon": "medic-person",
-      "create_form": "form:contact:person:create",
-      "edit_form": "form:contact:person:edit",
       "person": true
     }
   ],
