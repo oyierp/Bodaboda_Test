@@ -35,12 +35,12 @@ module.exports = [
     id: 'covid-test-all-time',
     type: 'count',
     icon: 'medic-covid-case',
-    goal: -1,
+    goal: 5120,
     translation_key: 'targets.all_timeCovid.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
-    appliesIf:allCovidTested, 
+    appliesIf:allCovidTested - pendCovidTested, 
     date:'now',
     idType: 'contact'
   },
@@ -72,25 +72,38 @@ module.exports = [
   },
   
   {
-    id: 'pendIncompCovid-test-all-time',
+    id: 'pendCovid-test-all-time',
     type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
-    translation_key: 'targets.pendIncompCovid.title',
+    translation_key: 'targets.pendCovid.title',
+    subtitle_translation_key: 'targets.all_time.subtitle',
+    appliesTo: 'contacts',
+    appliesToType:['suspected_case'],
+    appliesIf: pendCovidTested,
+    date:'now',
+  },
+
+  {
+    id: 'incEmpCovid-test-all-time',
+    type: 'count',
+    icon: 'medic-covid-case',
+    goal: -1,
+    translation_key: 'targets.incEmpCovid.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
     appliesIf: function(contact){
-      return pendCovidTested (contact) || incCovidTested (contact) || emptCovidTested(contact);
+      return incCovidTested (contact) || emptCovidTested(contact);
     },
     date:'now',
   },
   
   {
     id: 'mksCovid-test-all-time',
-    type: 'count',
+    type: 'percent',
     icon: 'medic-covid-case',
-    goal: -1,
+    goal: 640,
     translation_key: 'targets.mksCovid.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
@@ -101,9 +114,9 @@ module.exports = [
 
   {
     id: 'kjdCovid-test-all-time',
-    type: 'count',
+    type: 'percent',
     icon: 'medic-covid-case',
-    goal: -1,
+    goal: 640,
     translation_key: 'targets.kjdCovid.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
@@ -114,9 +127,9 @@ module.exports = [
 
   {
     id: 'nrbCovid-test-all-time',
-    type: 'count',
+    type: 'percent',
     icon: 'medic-covid-case',
-    goal: -1,
+    goal: 2720,
     translation_key: 'targets.nrbCovid.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
@@ -127,9 +140,9 @@ module.exports = [
 
   {
     id: 'kbuCovid-test-all-time',
-    type: 'count',
+    type: 'percent',
     icon: 'medic-covid-case',
-    goal: -1,
+    goal: 1120,
     translation_key: 'targets.kbuCovid.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
@@ -143,7 +156,7 @@ module.exports = [
     type: 'count',
     icon: 'medic-covid-case',
     goal: -1,
-    translation_key: 'targets.posCovidKjd.title',
+    translation_key: 'targets.posCovidMks.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
