@@ -40,7 +40,9 @@ module.exports = [
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
-    appliesIf:allCovidTested - pendCovidTested, 
+    appliesIf: function(contact){
+      return allCovidTested (contact) - pendCovidTested(contact);
+    },
     date:'now',
     idType: 'contact'
   },
