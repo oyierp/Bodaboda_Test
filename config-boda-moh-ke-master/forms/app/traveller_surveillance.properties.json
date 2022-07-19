@@ -1,9 +1,0 @@
-{
-    "icon": "icon-form-general",
-    "title": "Travellers Health Surveillance Form",
-    "context": {
-        "person": false,
-        "place": false,
-        "expression": "contact.contact_type === 'trace_contact' && !contact.transitioned_to_case"
-    }
-}
