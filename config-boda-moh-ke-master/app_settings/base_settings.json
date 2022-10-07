@@ -90,9 +90,7 @@
     "can_bulk_delete_reports": [
       "national_admin",
       "district_admin",
-      "program_officer",
-      "chw_supervisor",
-      "chw"
+      "program_officer"
     ],
     "can_configure": [
       "national_admin",
@@ -113,12 +111,7 @@
     "can_create_places": [
       "national_admin",
       "district_admin",
-      "program_officer",
-      "national_tracer",
-      "county_focal_person",
-      "sub_county_focal_person",
-      "chw_supervisor",
-      "chw"
+      "program_officer"
     ],
     "can_create_records": [
       "national_admin",
@@ -126,30 +119,22 @@
       "data_entry",
       "gateway",
       "program_officer",
-      "national_tracer",
-      "county_focal_person",
-      "sub_county_focal_person",
       "chw_supervisor",
       "chw"
     ],
     "can_create_users": [
       "national_admin",
-      "program_officer",
-      "national_tracer",
-      "county_focal_person",
-      "sub_county_focal_person"
+      "program_officer"
     ],
     "can_delete_contacts": [
       "national_admin",
       "district_admin",
-      "program_officer",
-      "national_tracer"
+      "program_officer"
     ],
     "can_delete_messages": [
       "national_admin",
       "district_admin",
-      "program_officer",
-      "national_tracer"
+      "program_officer"
     ],
     "can_delete_reports": [
       "national_admin",
@@ -178,9 +163,7 @@
       "program_officer",
       "national_tracer",
       "county_focal_person",
-      "sub_county_focal_person",
-      "chw_supervisor",
-      "chw"
+      "sub_county_focal_person"
     ],
     "can_edit_verification": [
       "national_admin",
@@ -209,9 +192,7 @@
       "district_admin",
       "program_officer",
       "national_tracer",
-      "sub_county_focal_person",
-      "chw_supervisor",
-      "chw"
+      "sub_county_focal_person"
     ],
     "can_export_feedback": [
       "national_admin",
@@ -225,17 +206,13 @@
       "analytics",
       "program_officer",
       "national_tracer",
-      "sub_county_focal_person",
-      "chw_supervisor",
-      "chw"
+      "sub_county_focal_person"
     ],
     "can_export_messages": [
       "national_admin",
       "district_admin",
       "analytics",
-      "program_officer",
-      "chw_supervisor",
-      "chw"
+      "program_officer"
     ],
     "can_log_out_on_android": [
       "rapid_response_team_member",
@@ -249,9 +226,7 @@
       "gateway",
       "program_officer",
       "national_tracer",
-      "sub_county_focal_person",
-      "chw_supervisor",
-      "chw"
+      "sub_county_focal_person"
     ],
     "can_update_people": [
       "national_admin",
@@ -267,11 +242,7 @@
       "national_admin",
       "district_admin",
       "program_officer",
-      "national_tracer",
-      "county_focal_person",
-      "sub_county_focal_person",
-      "chw_supervisor",
-      "chw"
+      "national_tracer"
     ],
     "can_update_reports": [
       "national_admin",
@@ -279,9 +250,7 @@
       "program_officer",
       "national_tracer",
       "county_focal_person",
-      "sub_county_focal_person",
-      "chw_supervisor",
-      "chw"
+      "sub_county_focal_person"
     ],
     "can_update_users": [
       "national_admin",
@@ -307,8 +276,7 @@
       "program_officer",
       "national_tracer",
       "sub_county_focal_person",
-      "chw_supervisor",
-      "chw"
+      "chw_supervisor"
     ],
     "can_view_analytics_tab": [
       "national_admin",
@@ -316,8 +284,7 @@
       "program_officer",
       "national_tracer",
       "sub_county_focal_person",
-      "chw_supervisor",
-      "chw"
+      "chw_supervisor"
     ],
     "can_view_call_action": [
       "national_admin",
@@ -333,21 +300,13 @@
       "national_admin",
       "district_admin",
       "program_officer",
-      "national_tracer",
-      "county_focal_person",
-      "sub_county_focal_person",
-      "chw_supervisor",
-      "chw"
+      "national_tracer"
     ],
     "can_view_contacts_tab": [
       "national_admin",
       "district_admin",
       "program_officer",
-      "national_tracer",
-      "county_focal_person",
-      "sub_county_focal_person",
-      "chw_supervisor",
-      "chw"
+      "national_tracer"
     ],
     "can_view_data_records": [
       "national_admin",
@@ -358,8 +317,7 @@
       "national_tracer",
       "county_focal_person",
       "sub_county_focal_person",
-      "chw_supervisor",
-      "chw"
+      "chw_supervisor"
     ],
     "can_view_last_visited_date": [],
     "can_view_message_action": [],
