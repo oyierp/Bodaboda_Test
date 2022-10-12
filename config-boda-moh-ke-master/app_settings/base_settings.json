@@ -90,7 +90,10 @@
     "can_bulk_delete_reports": [
       "national_admin",
       "district_admin",
-      "program_officer"
+      "program_officer",
+      "chw_supervisor",
+      "chw",
+      "rapid_response_team_member"
     ],
     "can_configure": [
       "national_admin",
@@ -102,16 +105,17 @@
       "national_admin",
       "district_admin",
       "program_officer",
-      "national_tracer",
-      "county_focal_person",
-      "sub_county_focal_person",
       "chw_supervisor",
-      "chw"
+      "chw",
+      "rapid_response_team_member"
     ],
     "can_create_places": [
       "national_admin",
       "district_admin",
-      "program_officer"
+      "program_officer",
+      "chw_supervisor",
+      "chw",
+      "rapid_response_team_member"
     ],
     "can_create_records": [
       "national_admin",
@@ -384,6 +388,11 @@
     "changes_limit": 100,
     "debounce_interval": 200
   },
+  "replication_depth": [
+    { "role": "chw_supervisor","depth": 3},
+    { "role": "chw","depth": 3}
+    }
+  ],
   "uhc": {
     "contacts_default_sort": "",
     "visit_count": {
@@ -484,7 +493,8 @@
       "primary_contact_key": "trace_case.field.contact",
       "parents": [
         "rapid_response_team",
-        "response_squad"
+        "county_office",
+        "anational_office"
       ],
       "icon": "medic-covid-suspect",
       "create_form": "form:contact:suspected_case:create",
