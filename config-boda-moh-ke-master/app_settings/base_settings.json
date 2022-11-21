@@ -391,8 +391,7 @@
   "replication_depth": [
     { "role": "chw_supervisor","depth": 3},
     { "role": "chw","depth": 3}
-    }
-  ],
+   ],
   "uhc": {
     "contacts_default_sort": "",
     "visit_count": {
