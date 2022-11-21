@@ -304,13 +304,17 @@
       "national_admin",
       "district_admin",
       "program_officer",
-      "national_tracer"
+      "national_tracer",
+      "chw_supervisor",
+      "chw"
     ],
     "can_view_contacts_tab": [
       "national_admin",
       "district_admin",
       "program_officer",
-      "national_tracer"
+      "national_tracer",
+      "chw_supervisor",
+      "chw"
     ],
     "can_view_data_records": [
       "national_admin",
